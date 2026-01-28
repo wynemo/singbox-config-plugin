@@ -1,0 +1,30 @@
+{
+  "name": "singbox-config",
+  "description": "将 v2ray/clash 订阅或 URI 转换为 Sing-box 完整配置",
+  "version": "1.0.0",
+  "author": {
+    "name": "Tommy Green",
+    "url": "https://www.youtube.com/@ggdbin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/singbox-config-plugin"
+  },
+  "license": "MIT",
+  "keywords": [
+    "singbox",
+    "v2ray",
+    "clash",
+    "proxy",
+    "config-generator"
+  ],
+  "requirements": {
+    "runtime": ["node >= 14.0.0 || bun >= 1.0.0"]
+  },
+  "skills": {
+    "singbox-config": {
+      "description": "转换 v2ray/clash 订阅为 Sing-box 配置",
+      "trigger": "/singbox-config"
+    }
+  }
+}

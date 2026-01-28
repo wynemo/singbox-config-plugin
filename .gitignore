@@ -1,0 +1,9 @@
+node_modules/
+*.log
+config.json
+subscription.txt
+test-output/
+.DS_Store
+*.bak
+.vscode/
+.idea/
