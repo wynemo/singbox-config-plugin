@@ -4,32 +4,15 @@
 
 ## 🚀 快速安装
 
-### 方式 1: 通过 Claude Code Plugin 命令（推荐）
-
 ```bash
 # 1. 添加 Marketplace
-/plugin marketplace add your-username/singbox-config-plugin
+/plugin marketplace add wynemo/singbox-config-plugin
 
 # 2. 安装插件
 /plugin install singbox-config@singbox-tools
 
 # 3. 使用
 /singbox-config
-```
-
-### 方式 2: 手动克隆
-
-```bash
-# macOS/Linux
-git clone https://github.com/your-username/singbox-config-plugin ~/.claude/plugins/singbox-config
-
-# Windows
-git clone https://github.com/your-username/singbox-config-plugin %USERPROFILE%\.claude\plugins\singbox-config
-```
-
-然后在 Claude Code 中启用：
-```bash
-/plugin enable singbox-config
 ```
 
 ## 📋 功能特性
@@ -138,18 +121,21 @@ bun cli.js -i subscription.txt -o config.json -v 1.11
 ```
 singbox-config-plugin/
 ├── .claude-plugin/
-│   ├── plugin.json         # 插件元数据
-│   └── marketplace.json    # Marketplace 配置
-├── skills/
+│   └── marketplace.json        # Marketplace 配置
+├── plugins/
 │   └── singbox-config/
-│       ├── skill.md        # Skill 定义
-│       ├── cli.js          # CLI 入口
-│       ├── test.js         # 协议解析
-│       ├── 1.11/           # Sing-box 1.11 支持
-│       └── 1.12/           # Sing-box 1.12 支持
-├── README.md               # 本文件
-├── LICENSE                 # MIT 许可证
-└── PLUGIN_GUIDE.md         # 插件开发指南
+│       ├── .claude-plugin/
+│       │   └── plugin.json     # 插件元数据
+│       └── skills/
+│           └── singbox-config/
+│               ├── skill.md    # Skill 定义
+│               ├── cli.js      # CLI 入口
+│               ├── test.js     # 协议解析
+│               ├── 1.11/       # Sing-box 1.11 支持
+│               └── 1.12/       # Sing-box 1.12 支持
+├── README.md                   # 本文件
+├── LICENSE                     # MIT 许可证
+└── PLUGIN_GUIDE.md             # 插件开发指南
 ```
 
 ## 🔄 更新插件
