@@ -95,9 +95,10 @@ async function main() {
     const testJsPath = path.join(scriptDir, 'test.js');
     const testJsContent = fs.readFileSync(testJsPath, 'utf-8');
 
-    // 创建沙箱上下文
+    // 创建沙箱上下文（禁用 debug 输出）
+    const silentConsole = { ...console, debug: () => {} };
     const sandbox = {
-        console,
+        console: silentConsole,
         atob: (str) => Buffer.from(str, 'base64').toString('binary'),
         btoa: (str) => Buffer.from(str, 'binary').toString('base64'),
         decodeURIComponent,

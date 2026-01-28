@@ -1483,7 +1483,7 @@ const ssParser = (proxy = {}) => {
     parsedProxy.plugin_opts = optArr.join(";");
   }
 
-  console.log("ss parsedProxy", parsedProxy);
+  console.debug("ss parsedProxy", parsedProxy);
   return parsedProxy;
 };
 // eslint-disable-next-line no-unused-vars

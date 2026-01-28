@@ -9,7 +9,9 @@ allowed-tools:
 
 # 生成 Sing-box 配置
 
-将 v2ray/clash 订阅或 URI 转换为 Sing-box 完整配置。
+将 v2ray/clash 订阅或 URI 转换为 Sing-box 完整配置。默认输出为带时间戳的配置文件，如 `sing-box-20250129-143052.json`。
+
+**重要**: 输入文件包含节点配置信息，请勿直接读取其内容，仅通过 `-i` 参数传递文件路径给 cli.js 处理。
 
 ## 支持的协议
 
@@ -51,19 +53,16 @@ bun --version
 cd .claude/skills/singbox-config
 
 # 基本用法
-echo "订阅内容" | node cli.js -o "sing-box-$(date +%Y%m%d-%H%M%S).json"
-
-# 指定版本
-echo "订阅内容" | node cli.js -v 1.12 -o "sing-box-$(date +%Y%m%d-%H%M%S).json"
-
-# 从文件读取并输出
 node cli.js -i subscription.txt -o "sing-box-$(date +%Y%m%d-%H%M%S).json"
 
+# 指定版本
+node cli.js -i subscription.txt -v 1.12 -o "sing-box-$(date +%Y%m%d-%H%M%S).json"
+
 # 使用 bun (更快)
-echo "订阅内容" | bun cli.js -v 1.11 -o "sing-box-$(date +%Y%m%d-%H%M%S).json"
+bun cli.js -i subscription.txt -v 1.11 -o "sing-box-$(date +%Y%m%d-%H%M%S).json"
 ```
 
-**注意**: 始终使用 `-o` 参数指定输出文件，避免配置输出到标准输出。
+**注意**: 必须使用 `-i` 从文件读取订阅内容，使用 `-o` 指定输出文件。
 
 ## 命令行参数
 
