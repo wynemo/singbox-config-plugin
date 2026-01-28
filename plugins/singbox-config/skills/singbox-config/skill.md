@@ -51,17 +51,19 @@ bun --version
 cd .claude/skills/singbox-config
 
 # 基本用法
-echo "订阅内容" | node cli.js
+echo "订阅内容" | node cli.js -o "sing-box-$(date +%Y%m%d-%H%M%S).json"
 
 # 指定版本
-echo "订阅内容" | node cli.js -v 1.12
+echo "订阅内容" | node cli.js -v 1.12 -o "sing-box-$(date +%Y%m%d-%H%M%S).json"
 
-# 从文件读取
-node cli.js -i subscription.txt -o config.json
+# 从文件读取并输出
+node cli.js -i subscription.txt -o "sing-box-$(date +%Y%m%d-%H%M%S).json"
 
 # 使用 bun (更快)
-echo "订阅内容" | bun cli.js -v 1.11
+echo "订阅内容" | bun cli.js -v 1.11 -o "sing-box-$(date +%Y%m%d-%H%M%S).json"
 ```
+
+**注意**: 始终使用 `-o` 参数指定输出文件，避免配置输出到标准输出。
 
 ## 命令行参数
 
