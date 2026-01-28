@@ -1,7 +1,7 @@
 {
   "name": "singbox-config",
   "description": "将 v2ray/clash 订阅或 URI 转换为 Sing-box 完整配置",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Tommy Green"
   },
