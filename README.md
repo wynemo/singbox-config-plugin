@@ -1,5 +1,7 @@
 # Sing-box Config Plugin for Claude Code
 
+[![Sing-box Config Plugin 使用教程](https://img.youtube.com/vi/F54Qotk75_A/maxresdefault.jpg)](https://www.youtube.com/watch?v=F54Qotk75_A)
+
 将 v2ray/clash 订阅或 URI 转换为 Sing-box 完整配置的 Claude Code 插件。
 
 ## 🚀 快速安装
@@ -186,6 +188,8 @@ winget install OpenJS.NodeJS
 - **Sing-box 文档**: https://sing-box.sagernet.org/
 
 ## 📺 相关视频
+
+[![Sing-box Config Plugin 使用教程](https://img.youtube.com/vi/F54Qotk75_A/maxresdefault.jpg)](https://www.youtube.com/watch?v=F54Qotk75_A)
 
 订阅我的 YouTube 频道获取更多教程：
 👉 https://www.youtube.com/@ggdbin/
