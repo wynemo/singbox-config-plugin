@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "singbox-config",
-      "source": ".",
+      "source": "./plugins/singbox-config",
       "description": "将 v2ray/clash 订阅或 URI 转换为 Sing-box 完整配置"
     }
   ]
